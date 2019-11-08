@@ -2,18 +2,19 @@ import React from 'react'
 import 'normalize.css/normalize.css'
 import '../styles/App.css'
 import { Provider } from 'react-redux'
-import store from '../store'
+import Main from './main'
+import store from '../redux/store'
 
-import Button from './Button'
-import Greeting from './Greeting'
+
+
 
 export default props => {
   return (
     <Provider store={store}>
-      <div>
-        <Button />
-        <Greeting />
+      <div id="container">
+        <Main />
+       
       </div>
-    </Provider>
+   </Provider>
   )
 }
