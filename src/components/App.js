@@ -4,6 +4,7 @@ import '../styles/App.css'
 import { Provider } from 'react-redux'
 import Main from './main'
 import store from '../redux/store'
+import Checkout from './Checkout'
 
 
 
@@ -13,7 +14,7 @@ export default props => {
     <Provider store={store}>
       <div id="container">
         <Main />
-       
+        <Checkout />
       </div>
    </Provider>
   )
