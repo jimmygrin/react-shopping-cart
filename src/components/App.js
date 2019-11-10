@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import Main from './main'
 import store from '../redux/store'
 import Checkout from './Checkout'
+import Sizes from './Sizes'
 
 
 
@@ -13,6 +14,7 @@ export default props => {
   return (
     <Provider store={store}>
       <div id="container">
+        <Sizes />
         <Main />
         <Checkout />
       </div>

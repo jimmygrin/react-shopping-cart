@@ -1,11 +1,18 @@
 html {box-sizing:border-box;}
 *, *::before, *::after {box-sizing:inherit;}
 
+
+
+
+
 #container {
     display: flex;
-    width: 1200px;
+    width: 1500px;
     margin: auto;
-    background: red;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+   
     
     
 }
@@ -14,4 +21,127 @@ html {box-sizing:border-box;}
     display: flex;
     justify-content: center;
     flex-flow: wrap;
+
+    margin: auto;
+    width: 900px;
+
+}
+
+#main img {
+    max-width: 200px;
+    max-height: auto;
+
+}
+
+#individual {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    
+}
+
+#individual:hover {
+    border: solid lightgray 1px;
+}
+
+#individual p {
+    text-align: center;
+}
+
+#individual button {
+    width: 175px;
+    height: 50px;
+    background: black;
+    color: white;
+    align-self: center;
+}
+
+#individual button:hover {
+    background-color: rgb(255, 219, 88);
+    color: white
+  }
+
+#checkout {
+  
+    width: 400px;
+   
+}
+
+#checkoutdesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#checkout img {
+    width: 60px;
+    height: 80px;
+}
+
+#checkout button {
+    width: 200px;
+    height: 20px;
+
+}
+ 
+#indcheckout {
+    display: flex;
+}
+
+#sizes {
+
+}
+
+.sizeicon {
+    display: flex;
+}
+.sizeicon p {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: lightgray;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 10px;
+}
+
+.sizeicon p:hover {
+    border: 1px solid black
+}
+
+#sizehead {
+    margin-left: 10px;
+}
+
+#message {
+    margin-left: 10px;
+}
+
+
+#star {
+    display: flex;
+    margin-left: 10px;;
+}
+
+#star i {
+    width: 60px;
+    height: 30px;
+    border: solid black 1px;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+    margin-top: 16px;
+
+}
+
+#star p{
+    width: 60px;
+    height: 30px;
+    border: solid black 1px;
+    line-height: 30px;
+    text-align: center;
+
 }

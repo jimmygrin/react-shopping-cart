@@ -13,12 +13,15 @@ const CART_ITEMS = 'CART_ITEMS'
 
 const REMOVE_ITEM = 'REMOVE_ITEM'
 
+const GET_CART = 'GET_CART'
+
 // initial state
 
 const initialState = {
     prod: [],
     add: [],
-    remove: []
+    remove: [],
+    cart: []
 }
 
 
@@ -31,7 +34,9 @@ export default function (state = initialState, action) {
         case CART_ITEMS:
             return { ...state, add: action.payload}
         case REMOVE_ITEM:
-            return {...state, remove: action.payload}        
+            return {...state, remove: action.payload}   
+        case GET_CART:
+            return {...state, cart: action.payload}          
         default:
             return state    
     }
@@ -56,6 +61,7 @@ function getProd(){
 }, [])
 }
 }
+
 
 export function addItem(product) {
 
@@ -87,17 +93,35 @@ export function removeItem(id) {
 
 }
 
+
+function getCart(){
+   
+    return dispatch => {
+    axios.get("./cart").then(resp => {
+        dispatch({
+            type: GET_CART,
+            payload: resp.data
+    })
+}, [])
+}
+}
+
 export function useCart() {
     const dispatch = useDispatch()
     const products = useSelector(appState => appState.cartReducer.prod) 
     const add = (product) => dispatch(addItem(product))
     const remove = (id) => dispatch(removeItem(id))
+    const cart = useSelector(appState => appState.cartReducer.cart)
 
     useEffect(() => {
         dispatch(getProd())
     }, [])
 
- return { products, add, remove }   
+    useEffect(() => {
+        dispatch(getCart())
+    }, [])
+
+ return { products, add, remove, cart }   
     
     
 }
