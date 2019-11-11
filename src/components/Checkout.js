@@ -4,9 +4,12 @@ import { useSelector } from 'react-redux'
 
 
 
-export default function (props) {
-const { cart, add, remove } = useCart()
 
+
+
+export default function (props) {
+
+    const { cart, add, remove } = useCart()
 
 
     return (

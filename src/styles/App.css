@@ -1,7 +1,9 @@
 html {box-sizing:border-box;}
 *, *::before, *::after {box-sizing:inherit;}
 
-
+body {
+    font-family: sans-serif;
+}
 
 
 
@@ -54,6 +56,9 @@ html {box-sizing:border-box;}
     max-height: auto;
 }
 
+#installments {
+    color: gray;
+}
 #individual {
     border: none;
     display: flex;
@@ -70,6 +75,9 @@ html {box-sizing:border-box;}
     text-align: center;
 }
 
+#individual:hover button { background-color: rgb(255, 219, 88);
+    color: white }
+
 #individual button {
     width: 175px;
     height: 50px;
@@ -78,11 +86,11 @@ html {box-sizing:border-box;}
     align-self: center;
     border: black solid 1px;
 }
-
+/* 
 #individual button:hover {
     background-color: rgb(255, 219, 88);
     color: white
-  }
+  } */
 
 
 
@@ -93,7 +101,7 @@ html {box-sizing:border-box;}
     align-items: center;
     width: 300px;
     height: 100%;
-    background: darkgray;
+    background: rgb(27, 26, 32);
     color: white;
 }
 

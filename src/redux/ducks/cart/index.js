@@ -94,6 +94,7 @@ export function removeItem(id) {
 }
 
 
+
 function getCart(){
    
     return dispatch => {
