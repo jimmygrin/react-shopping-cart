@@ -10,11 +10,13 @@ import { useSelector } from 'react-redux'
 export default function (props) {
 
     const { cart, add, remove } = useCart()
-
+    function show() {
+        document.getElementById("checkout").classList.toggle('active');
+    }
 
     return (
       <div>
-          <i class="fa fa-shopping-cart"></i>
+          <i class="fa fa-shopping-cart" onClick="(show())"></i>
         <div id="checkout">
             {cart.map((cart, i) => (
                 <div id="indcheckout" key={'key' + i}>

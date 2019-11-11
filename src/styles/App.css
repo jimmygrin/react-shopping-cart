@@ -105,6 +105,9 @@ body {
     color: white;
 }
 
+#checkout.active {
+    left:0px
+}
 
 
 #checkoutdesc {
