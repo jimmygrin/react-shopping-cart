@@ -27,10 +27,31 @@ html {box-sizing:border-box;}
 
 }
 
+#center {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    
+}
+#maintop {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 900px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#maintop selector {
+    margin-left: 5px;
+}
+#maintop span {
+    margin-right: 5px;
+}
+
 #main img {
     max-width: 200px;
     max-height: auto;
-
 }
 
 #individual {
@@ -55,6 +76,7 @@ html {box-sizing:border-box;}
     background: black;
     color: white;
     align-self: center;
+    border: black solid 1px;
 }
 
 #individual button:hover {
@@ -62,11 +84,20 @@ html {box-sizing:border-box;}
     color: white
   }
 
+
+
+
 #checkout {
-  
-    width: 400px;
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    background: darkgray;
+    color: white;
 }
+
+
 
 #checkoutdesc {
     display: flex;
@@ -77,6 +108,17 @@ html {box-sizing:border-box;}
 #checkout img {
     width: 60px;
     height: 80px;
+}
+
+#checkoutbutton {
+    color: white;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: black;
+  
+  
 }
 
 #checkout button {
